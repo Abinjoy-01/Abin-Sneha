@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Celebrate the wedding of Abin & Sneha. Discover the itinerary, venue details, and love story.#AbinWedsSneha">
+  <meta name="theme-color" content="#FCEEE9">
+  <title>Abin & Sneha | The Wedding Celebration</title>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --blush: #FDE8E9;
+      --lavender: #EAE6F8;
+      --peach: #FCEEE9;
+      --beige: #F9F6F0;
+      --gold: #D4AF37;
+      --gold-dark: #AA820A;
+      --dark-plum: #3E2723;
+      --rose-accent: #D87093;
+      --white-glass: rgba(255, 255, 255, 0.72);
+      --glass-border: rgba(255, 255, 255, 0.85);
+      --shadow-soft: 0 10px 30px rgba(212, 175, 55, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-script: 'Pinyon Script', cursive;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--dark-plum);
+      background: linear-gradient(135deg, #FFF9F6 0%, #FDF4F5 50%, #F5F0FB 100%);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Floating Hearts Container */
+    #hearts-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .floating-heart {
+      position: absolute;
+      color: rgba(216, 112, 147, 0.35);
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(105vh) scale(0.6) rotate(0deg); opacity: 0; }
+      20% { opacity: 0.8; }
+      80% { opacity: 0.8; }
+      100% { transform: translateY(-10vh) scale(1.1) rotate(360deg); opacity: 0; }
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold-dark);
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-plum);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    /* Glassmorphism Classes */
+    .glass-card {
+      background: var(--white-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 2.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+    }
+
+    /* Typography & Layout */
+    .section-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+      position: relative;
+    }
+
+    .section-title-wrap {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .script-sub {
+      font-family: var(--font-script);
+      font-size: 2.8rem;
+      color: var(--rose-accent);
+      display: block;
+      margin-bottom: -0.5rem;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
+      color: var(--dark-plum);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '❖';
+      display: block;
+      font-size: 1rem;
+      color: var(--gold);
+      margin-top: 0.3rem;
+    }
+
+    /* Hero Section */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 1.5rem 2rem;
+      background: radial-gradient(circle at center, #FFF4F2 0%, #F5ECF7 100%);
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      z-index: 2;
+    }
+
+    .hero-names {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--dark-plum);
+      margin: 0.5rem 0;
+      letter-spacing: 2px;
+    }
+
+    .hero-names span {
+      font-family: var(--font-script);
+      font-weight: 400;
+      color: var(--rose-accent);
+      font-size: 3.5rem;
+      margin: 0 0.5rem;
+    }
+
+    .hashtag-badge {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px dashed var(--gold);
+      padding: 0.4rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* SVG Character Illustration Container */
+    .hero-illustration {
+      width: 100%;
+      max-width: 380px;
+      height: 240px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .character-svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.06));
+    }
+
+    /* Countdown Section */
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      max-width: 600px;
+      margin: 2rem auto 0;
+    }
+
+    .count-box {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: var(--radius-md);
+      padding: 1.2rem 0.5rem;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+
+    .count-num {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold-dark);
+      display: block;
+      line-height: 1;
+    }
+
+    .count-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #777;
+    }
+
+    /* Scratch Card Section */
+    .scratch-wrapper {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .scratch-container {
+      position: relative;
+      width: 320px;
+      height: 160px;
+      margin: 1.5rem 0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .scratch-secret {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #FFF0F5, #FFF8DC);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 2px dashed var(--gold);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+    }
+
+    .scratch-secret h3 {
+      font-family: var(--font-serif);
+      color: var(--gold-dark);
+      font-size: 1.6rem;
+    }
+
+    .scratch-secret p {
+      font-size: 0.9rem;
+      color: var(--dark-plum);
+      font-weight: 500;
+    }
+
+    #scratch-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: crosshair;
+      z-index: 2;
+    }
+
+    /* Love Story Timeline */
+    .story-timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .story-timeline::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background: var(--gold);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.4;
+    }
+
+    .story-item {
+      padding: 1rem 2rem;
+      position: relative;
+      width: 50%;
+    }
+
+    .story-item.left { left: 0; text-align: right; }
+    .story-item.right { left: 50%; text-align: left; }
+
+    .story-item::before {
+      content: '❤';
+      position: absolute;
+      top: 24px;
+      width: 24px;
+      height: 24px;
+      background: #FFF;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--rose-accent);
+      font-size: 0.75rem;
+      z-index: 1;
+    }
+
+    .story-item.left::before { right: -12px; }
+    .story-item.right::before { left: -12px; }
+
+    .story-card {
+      background: var(--white-glass);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .story-date {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      color: var(--gold-dark);
+      font-size: 1.1rem;
+    }
+
+    /* Event Functions Cards & Custom Illustrations */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .event-card {
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .event-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--gold-dark);
+    }
+
+    .event-svg-wrap {
+      width: 100%;
+      height: 180px;
+      margin: 0.5rem 0 1.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .event-title {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--dark-plum);
+      margin-bottom: 0.4rem;
+    }
+
+    .event-time, .event-loc {
+      font-size: 0.88rem;
+      color: #666;
+      margin-bottom: 0.3rem;
+    }
+
+    .event-dress {
+      margin-top: 1rem;
+      padding-top: 0.8rem;
+      border-top: 1px dashed rgba(212, 175, 55, 0.3);
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--rose-accent);
+    }
+
+    /* Gallery & Lightbox */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      height: 240px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--glass-border);
+      background: #FFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gallery-item svg {
+      width: 80%;
+      height: 80%;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover svg {
+      transform: scale(1.08);
+    }
+
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 80%;
+      background: #FFF;
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      position: relative;
+      text-align: center;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: #FFF;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* RSVP Form */
+    .rsvp-form {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--dark-plum);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: var(--dark-plum);
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    .form-control:focus {
+      border-color: var(--gold-dark);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+    }
+
+    .btn-gold {
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: #FFF;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-gold:hover {
+      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Venue & Map */
+    .venue-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 320px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* Family Section */
+    .family-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .family-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .family-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      background: var(--lavender);
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--gold-dark);
+    }
+
+    /* Info Cards Grid (FAQ, Accommodation, Travel) */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Guestbook Messages */
+    .guestbook-list {
+      max-height: 250px;
+      overflow-y: auto;
+      margin-bottom: 2rem;
+      padding-right: 0.5rem;
+    }
+
+    .guest-msg {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 0.8rem;
+      border-left: 3px solid var(--gold);
+    }
+
+    /* Footer / Thank You */
+    footer {
+      background: linear-gradient(135deg, #2D1820 0%, #1A0D13 100%);
+      color: #FFF;
+      text-align: center;
+      padding: 5rem 1.5rem 3rem;
+      position: relative;
+    }
+
+    .footer-title {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-names { font-size: 2.8rem; }
+      .hero-names span { font-size: 2.4rem; }
+      .nav-links { display: none; }
+      .story-timeline::after { left: 20px; }
+      .story-item { width: 100%; text-align: left; padding-left: 50px; }
+      .story-item.right { left: 0; }
+      .story-item.left::before, .story-item.right::before { left: 9px; }
+      .venue-grid { grid-template-columns: 1fr; }
+      .countdown-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Hearts Background Container -->
+  <div id="hearts-container"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#hero" class="logo">A & S</a>
+      <ul class="nav-links">
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#events">Celebrations</a></li>
+        <li><a href="#scratch">Reveal Date</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#venue">Venue</a></li>
+       <!-- <li><a href="#rsvp">RSVP</a></li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <span class="script-sub">We are getting married!</span>
+      <h1 class="hero-names">Abin <span>&</span> Sneha</h1>
+      <div class="hashtag-badge">#AbinWedSneha</div>
+
+      <!-- Hero Couple Vector Illustration -->
+      <div class="hero-illustration">
+        <svg class="character-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sparkles & Hearts Background -->
+          <circle cx="200" cy="50" r="8" fill="#FAD02C" opacity="0.6"/>
+          <path d="M200 70 C190 55, 170 65, 170 80 C170 95, 200 115, 200 115 C200 115, 230 95, 230 80 C230 65, 210 55, 200 70 Z" fill="#E25858" opacity="0.8"/>
+          <!-- Groom (Abin) Cartoon -->
+          <g id="groom-hero">
+            <circle cx="150" cy="90" r="32" fill="#FCD7B0"/>
+            <!-- Hair & Safa -->
+            <path d="M120 85 C120 50, 180 50, 180 85" fill="#5A3825"/>
+            <path d="M120 70 C130 45, 170 45, 180 70 C170 60, 130 60, 120 70 Z" fill="#D4AF37"/>
+            <circle cx="150" cy="55" r="5" fill="#C41E3A"/>
+            <!-- Face details -->
+            <circle cx="140" cy="90" r="3" fill="#333"/>
+            <circle cx="160" cy="90" r="3" fill="#333"/>
+            <path d="M144 100 Q150 106 156 100" stroke="#333" stroke-width="2" fill="none"/>
+            <path d="M140 96 Q150 99 160 96" stroke="#4A2E18" stroke-width="2" fill="none"/>
+            <!-- Body / Sherwani -->
+            <path d="M125 120 L175 120 L185 220 L115 220 Z" fill="#FFF8DC"/>
+            <path d="M148 120 L148 220" stroke="#D4AF37" stroke-width="3"/>
+            <!-- Stole (Dupatta) -->
+            <path d="M125 120 Q110 160 120 200" stroke="#C41E3A" stroke-width="12" fill="none" stroke-linecap="round"/>
+          </g>
+          <!-- Bride (Sneha) Cartoon -->
+          <g id="bride-hero">
+            <circle cx="250" cy="95" r="30" fill="#FCD7B0"/>
+            <!-- Hair & Maang Tikka -->
+            <path d="M220 95 C220 60, 280 60, 280 95" fill="#2C1B18"/>
+            <circle cx="250" cy="72" r="4" fill="#D4AF37"/>
+            <!-- Face details -->
+            <circle cx="240" cy="95" r="3" fill="#333"/>
+            <circle cx="260" cy="95" r="3" fill="#333"/>
+            <circle cx="235" cy="100" r="4" fill="#FFB6C1" opacity="0.6"/>
+            <circle cx="265" cy="100" r="4" fill="#FFB6C1" opacity="0.6"/>
+            <path d="M245 105 Q250 110 255 105" stroke="#C41E3A" stroke-width="2" fill="none"/>
+            <!-- Red Lehenga Outfit -->
+            <path d="M230 125 L270 125 L290 220 L210 220 Z" fill="#C41E3A"/>
+            <!-- Jewellery / Floral Border pattern -->
+            <circle cx="250" cy="128" r="8" fill="none" stroke="#D4AF37" stroke-width="2"/>
+            <path d="M220 140 Q250 170 280 140" stroke="#D4AF37" stroke-width="4" fill="none"/>
+            <!-- Red Chunni/Veil outline -->
+            <path d="M220 80 Q250 65 280 80 Q295 130 285 180" stroke="#B01B34" stroke-width="6" fill="none" opacity="0.7"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Live Countdown -->
+      <div class="countdown-grid">
+        <div class="count-box">
+          <span class="count-num" id="days">00</span>
+          <span class="count-label">Days</span>
+        </div>
+        <div class="count-box">
+          <span class="count-num" id="hours">00</span>
+          <span class="count-label">Hours</span>
+        </div>
+        <div class="count-box">
+          <span class="count-num" id="mins">00</span>
+          <span class="count-label">Mins</span>
+        </div>
+        <div class="count-box">
+          <span class="count-num" id="secs">00</span>
+          <span class="count-label">Secs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scratch Card Section -->
+  <section id="scratch" class="section-container">
+    <div class="section-title-wrap">
+      <span class="script-sub">Interactive Surprise</span>
+      <h2 class="section-title">Reveal Our Date</h2>
+    </div>
+    <div class="scratch-wrapper">
+      <p style="font-size: 0.95rem; color: #666;">Scratch the golden card below using your mouse or finger to uncover the big date!</p>
+      <div class="scratch-container">
+        <div class="scratch-secret">
+          <h3>NOVEMBER 30, 2026</h3>
+          <p>Yet to decide • Chennai</p>
+          <span style="font-size: 0.8rem; color: var(--gold-dark); margin-top: 5px;">#SaveTheDate</span>
+        </div>
+        <canvas id="scratch-canvas" width="320" height="160"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Love Story Section -->
+  <section id="story" class="section-container">
+    <div class="section-title-wrap">
+      <span class="script-sub">How It All Began</span>
+      <h2 class="section-title">Our Love Story</h2>
+    </div>
+    <div class="story-timeline">
+      <div class="story-item left">
+        <div class="story-card">
+          <span class="story-date">16 Aug </span>
+          <h4>The First Hello</h4>
+          <p style="font-size: 0.9rem; color: #666; margin-top: 0.4rem;">A serendipitous meeting over coffee where a 20-minute chat turned into a life time irreplacable conversation.</p>
+        </div>
+      </div>
+      <div class="story-item right">
+        <div class="story-card">
+          <span class="story-date">19 Aug</span>
+          <h4>The Romantic Getaway</h4>
+          <p style="font-size: 0.9rem; color: #666; margin-top: 0.4rem;">She was Ready to Yes, but he never Asked - Unspokem understandings</p>
+        </div>
+      </div>
+      <div class="story-item left">
+        <div class="story-card">
+          <span class="story-date">5 Sep </span>
+          <h4>She Said Yes!</h4>
+          <p style="font-size: 0.9rem; color: #666; margin-top: 0.4rem;">With fairy lights, a ring, and ocean waves beneath the starry sky, our journey became an eternal promise.</p>
+        </div>
+      </div>
+      <div class="story-item right">
+        <div class="story-card">
+          <span class="story-date">30 Nov</span>
+          <h4>The Big Day</h4>
+          <p style="font-size: 0.9rem; color: #666; margin-top: 0.4rem;">Ready to step into our new life together, surrounded by our beloved family and friends.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wedding Events with Custom Illustrations -->
+  <section id="events" class="section-container">
+    <div class="section-title-wrap">
+      <span class="script-sub">Celebration Details</span>
+      <h2 class="section-title">Wedding Itinerary</h2>
+    </div>
+    <div class="events-grid">
+
+      <!-- 1. Wedding -->
+      <div class="glass-card event-card">
+        <span class="event-badge"> Fine Day</span>
+        <h3 class="event-title">The Wedding (Vivaham)</h3>
+        <!-- Wedding Couple Vector -->
+        <div class="event-svg-wrap">
+          <svg viewBox="0 0 200 150" width="160" height="120">
+            <circle cx="100" cy="75" r="60" fill="#FCE4EC" opacity="0.7"/>
+            <!-- Mandap Arch -->
+            <path d="M 40,130 Q 100,20 160,130" stroke="#D4AF37" stroke-width="3" fill="none"/>
+            <!-- Groom in Cream Sherwani & Red Turban -->
+            <circle cx="80" cy="65" r="16" fill="#FCD7B0"/>
+            <path d="M 66,54 Q 80,42 94,54 Z" fill="#C41E3A"/>
+            <path d="M 68,82 L 92,82 L 95,130 L 65,130 Z" fill="#FFFDD0"/>
+            <!-- Bride in Royal Red Lehenga & Gold Veil -->
+            <circle cx="120" cy="68" r="15" fill="#FCD7B0"/>
+            <path d="M 105,56 Q 120,48 135,56" stroke="#D4AF37" stroke-width="3" fill="none"/>
+            <path d="M 108,84 L 132,84 L 145,130 L 95,130 Z" fill="#B71C1C"/>
+            <!-- Jaimala / Garland -->
+            <path d="M 85,85 Q 100,105 115,85" stroke="#E91E63" stroke-width="3" fill="none"/>
+          </svg>
+        </div>
+        <p class="event-time"><i class="far fa-clock"></i> 04:30 PM Holy Mass</p>
+        <p class="event-loc"><i class="fas fa-map-marker-alt"></i> Yet to Decide</p>
+       <!-- <p class="event-dress">Dress Code: Traditional Red, Gold & Ivory</p> -->
+      </div>
+
+      <!-- 2. Reception -->
+      <div class="glass-card event-card">
+        <span class="event-badge"> Dinner & Toast</span>
+        <h3 class="event-title">The Reception</h3>
+        <!-- Reception Couple Vector -->
+        <div class="event-svg-wrap">
+          <svg viewBox="0 0 200 150" width="160" height="120">
+            <circle cx="100" cy="75" r="60" fill="#ECEFF1" opacity="0.7"/>
+            <!-- Groom in Black Tuxedo -->
+            <circle cx="80" cy="65" r="16" fill="#FCD7B0"/>
+            <path d="M 68,82 L 92,82 L 95,130 L 65,130 Z" fill="#212121"/>
+            <polygon points="76,82 84,82 80,88" fill="#D4AF37"/>
+            <!-- Bride in Champagne Gold Evening Gown -->
+            <circle cx="120" cy="68" r="15" fill="#FCD7B0"/>
+            <path d="M 108,84 L 132,84 L 142,130 L 98,130 Z" fill="#E0A96D"/>
+            <!-- Chandelier Sparkle -->
+            <circle cx="100" cy="25" r="4" fill="#D4AF37"/>
+          </svg>
+        </div>
+        <p class="event-time"><i class="far fa-clock"></i> 07:00 PM Onwards</p>
+        <p class="event-loc"><i class="fas fa-map-marker-alt"></i> Yet to Decide</p>
+        <!--<p class="event-dress">Dress Code: Tuxedos & Cocktail Gowns</p>-->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Photo Gallery & Lightbox -->
+  <section id="gallery" class="section-container">
+    <div class="section-title-wrap">
+      <span class="script-sub">Sweet Memories</span>
+      <h2 class="section-title">Moments of Love</h2>
+    </div>
+    <div class="gallery-grid">
+      <!-- Gallery Card 1 -->
+      <div class="gallery-item" onclick="openLightbox('The Proposal think better')">
+        <svg viewBox="0 0 100 100">
+          <rect width="100" height="100" fill="#FDE8E9"/>
+          <path d="M50 35 C40 20, 20 30, 20 45 C20 60, 50 80, 50 80 C50 80, 80 60, 80 45 C80 30, 60 20, 50 35 Z" fill="#D87093"/>
+          <text x="50" y="92" font-size="8" text-anchor="middle" fill="#555" font-family="sans-serif">The Proposal</text>
+        </svg>
+      </div>
+      <!-- Gallery Card 2 -->
+      <div class="gallery-item" onclick="openLightbox('Coffee Dates & Conversations')">
+        <svg viewBox="0 0 100 100">
+          <rect width="100" height="100" fill="#EAE6F8"/>
+          <circle cx="50" cy="45" r="22" fill="#D4AF37" opacity="0.6"/>
+          <text x="50" y="50" font-size="20" text-anchor="middle">☕</text>
+          <text x="50" y="85" font-size="8" text-anchor="middle" fill="#555" font-family="sans-serif">First Coffee</text>
+        </svg>
+      </div>
+      
+      <!-- Gallery Card 4 -->
+      <div class="gallery-item" onclick="openLightbox('The Engagement Celeberation')">
+        <svg viewBox="0 0 100 100">
+          <rect width="100" height="100" fill="#FFF9D2"/>
+          <circle cx="50" cy="45" r="22" fill="#FFD700" opacity="0.5"/>
+          <text x="50" y="52" font-size="20" text-anchor="middle">💍</text>
+          <text x="50" y="85" font-size="8" text-anchor="middle" fill="#555" font-family="sans-serif">Engagement Ceremony</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <div id="lightbox-body" style="padding: 2rem;">
+        <h3 id="lightbox-caption" style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--gold-dark);"></h3>
+        <p style="margin-top: 0.5rem; color: #666;">Cherished memory from Abin & Sneha's journey together.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meet the Family -->
+
+  <!-- Venue & Directions -->
+  <section id="venue" class="section-container">
+    <div class="section-title-wrap">
+      <span class="script-sub">Where & When</span>
+      <h2 class="section-title">The Wedding Venue</h2>
+    </div>
+    <div class="venue-grid">
+      <div class="glass-card">
+        <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--dark-plum); margin-bottom: 0.5rem;">St. Pius X (Yet to decide)</h3>
+        <p style="color: var(--gold-dark); font-weight: 600; margin-bottom: 1rem;"><i class="fas fa-map-pin"></i>yet to decidet the hall</p>
+        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1.5rem;">yet to decide the address, Chennai, India</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-gold" style="display:inline-block; width: auto; padding: 0.8rem 1.8rem;">
+          <i class="fas fa-directions"></i> Get Directions
+        </a>
+      </div>
+      <div>
+        <iframe 
+          class="map-frame" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.126647020681!2d80.23934007793723!3d12.96374685473602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d1265cba553%3A0xe941326fe4a340f!2sSt.%20Pius%20Church!5e0!3m2!1sen!2sin!4v1787622849715!5m2!1sen!2sin" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Wedding Venue Location">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel & FAQs & Dress Code Grid -->
+  
+  <!-- RSVP Section -->
+ 
+  <!-- Guestbook Section -->
+  <section class="section-container">
+    <div class="section-title-wrap">
+      <span class="script-sub">Warm Wishes</span>
+      <h2 class="section-title">The Guestbook</h2>
+    </div>
+    <div class="glass-card" style="max-width: 700px; margin: 0 auto;">
+      <div class="guestbook-list" id="guestbook-entries">
+        <div class="guest-msg">
+         <!-- <strong>Priya & Kunal:</strong> "So ecstatic for both of you! Can't wait to dance our hearts out at the Sangeet!"-->
+        </div>
+        <div class="guest-msg">
+          <strong>Abin:</strong> "Congratulations Abin & Sneha! Wishing you a lifetime of love and laughter."
+        </div>
+      </div>
+      <div style="display: flex; gap: 0.5rem;">
+        <input type="text" id="wishes-input" class="form-control" placeholder="Write a note to Abin & Sneha...">
+        <button onclick="addWish()" class="btn-gold" style="width: auto; white-space: nowrap;">Post Wish</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Thank You & Footer -->
+  <footer>
+    <h2 class="footer-title">Thank You</h2>
+    <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 1.5rem; opacity: 0.9;">
+      Your presence, blessings, and love mean the world to us as we embark on this sacred journey together.
+    </p>
+    <div class="hashtag-badge" style="background: rgba(255,255,255,0.1); color: var(--gold);">#AbinWedsSneha</div>
+    <p style="font-size: 0.8rem; margin-top: 2rem; opacity: 0.6;">With Love, Abin & Sneha • 2026</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // 1. Floating Hearts Animation Generator
+    function createHearts() {
+      const container = document.getElementById('hearts-container');
+      const symbols = ['❤', '♥', '🌸', '✨'];
+      for (let i = 0; i < 20; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'floating-heart';
+        heart.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 5 + 6) + 's';
+        heart.style.animationDelay = (Math.random() * 5) + 's';
+        heart.style.fontSize = (Math.random() * 14 + 14) + 'px';
+        container.appendChild(heart);
+      }
+    }
+    createHearts();
+
+    // 2. Countdown Timer to Wedding Date (Nov 30, 2026)
+    const targetDate = new Date("November 30, 2026 04:30:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerText = String(days).padStart(2, '0');
+        document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+        document.getElementById('mins').innerText = String(minutes).padStart(2, '0');
+        document.getElementById('secs').innerText = String(seconds).padStart(2, '0');
+      }
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // 3. Scratch Card Animation Logic
+    const canvas = document.getElementById('scratch-canvas');
+    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+
+    // Fill scratch surface with gold gradient & texture
+    function initScratchCard() {
+      const grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      grad.addColorStop(0, '#D4AF37');
+      grad.addColorStop(0.5, '#F3E5AB');
+      grad.addColorStop(1, '#AA820A');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Add scratch instruction text on canvas
+      ctx.font = "bold 15px Montserrat, sans-serif";
+      ctx.fillStyle = "#3E2723";
+      ctx.textAlign = "center";
+      ctx.fillText("✨ Scratch Here to Reveal Date ✨", canvas.width / 2, canvas.height / 2 + 5);
+    }
+    initScratchCard();
+
+    function scratch(e) {
+      if (!isDrawing) return;
+      const rect = canvas.getBoundingClientRect();
+      const x = (e.clientX || (e.touches && e.touches[0].clientX)) - rect.left;
+      const y = (e.clientY || (e.touches && e.touches[0].clientY)) - rect.top;
+
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      ctx.arc(x, y, 22, 0, Math.PI * 2, false);
+      ctx.fill();
+    }
+
+    canvas.addEventListener('mousedown', (e) => { isDrawing = true; scratch(e); });
+    canvas.addEventListener('mousemove', scratch);
+    window.addEventListener('mouseup', () => { isDrawing = false; });
+
+    canvas.addEventListener('touchstart', (e) => { isDrawing = true; scratch(e); });
+    canvas.addEventListener('touchmove', scratch);
+    window.addEventListener('touchend', () => { isDrawing = false; });
+
+    // 4. Lightbox Handlers
+    function openLightbox(caption) {
+      document.getElementById('lightbox-caption').innerText = caption;
+      document.getElementById('lightbox-modal').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').style.display = 'none';
+    }
+
+    // 5. RSVP & Guestbook Submission
+    function handleRSVP(e) {
+      e.preventDefault();
+      const name = document.getElementById('guest-name').value;
+      const status = document.getElementById('rsvp-status');
+      status.innerText = `Thank you, ${name}! Your RSVP has been graciously recorded.`;
+      status.style.display = 'block';
+      e.target.reset();
+    }
+
+    function addWish() {
+      const input = document.getElementById('wishes-input');
+      const text = input.value.trim();
+      if (text) {
+        const entry = document.createElement('div');
+        entry.className = 'guest-msg';
+        entry.innerHTML = `<strong>Guest:</strong> "${text}"`;
+        document.getElementById('guestbook-entries').prepend(entry);
+        input.value = '';
+      }
+    }
+  </script>
+</body>
+</html>
