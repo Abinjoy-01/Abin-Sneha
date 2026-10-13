@@ -664,6 +664,9 @@
   </style>
 </head>
 <body>
+   <audio id="weddingMusic" loop autoplay>
+    <source src="wedding-music.mp3" type="audio/mpeg">
+   </audio>
 
   <!-- Floating Hearts Background Container -->
   <div id="hearts-container"></div>
@@ -671,12 +674,12 @@
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
-      <a href="#hero" class="logo">A & S</a>
+      <a href="#hero" class="logo">𝓐 & 𝓢</a>
       <ul class="nav-links">
         <li><a href="#story">Our Story</a></li>
         <li><a href="#events">Celebrations</a></li>
         <li><a href="#scratch">Reveal Date</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <!--<li><a href="#gallery">Gallery</a></li> -->
         <li><a href="#venue">Venue</a></li>
        <!-- <li><a href="#rsvp">RSVP</a></li> -->
       </ul>
@@ -957,6 +960,27 @@
 
   <!-- Scripts -->
   <script>
+
+     const weddingMusic = document.getElementById("weddingMusic");
+
+    // Set volume
+    weddingMusic.volume = 0.10;
+
+    // Try to start music immediately
+    window.addEventListener("load", function () {
+        weddingMusic.play().catch(function (error) {
+            console.log("Autoplay was blocked by the browser.");
+        });
+    });
+
+    // If the browser allows autoplay after any interaction,
+    // start the music automatically on the first interaction.
+    document.addEventListener("click", function () {
+        if (weddingMusic.paused) {
+            weddingMusic.play().catch(function () {});
+        }
+    }, { once: true });
+
     // 1. Floating Hearts Animation Generator
     function createHearts() {
       const container = document.getElementById('hearts-container');
